@@ -9,13 +9,37 @@
 }
 
 body {
+  position: relative;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
   display: grid;
   height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: #222;
+  background-color: hsl(185, 75%, 39%);
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  width: 978px;
+  height: 978px;
+  background-image: url(./images/bg-pattern-top.svg);
+  top: calc(100vh / 2 - 978px);
+  left: calc(100vw / 2 - 978px);
+
+  z-index: -1;
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  width: 978px;
+  height: 978px;
+  background-image: url(./images/bg-pattern-bottom.svg);
+  top: calc(100vh / 2);
+  left: calc(100vw / 2);
+  z-index: -1;
 }
 
 .card-container {
@@ -36,7 +60,6 @@ body {
 .user p {
   font-size: 14px;
   color: hsl(227, 10%, 46%);
-  letter-spacing: 2px;
 }
 
 .age {
