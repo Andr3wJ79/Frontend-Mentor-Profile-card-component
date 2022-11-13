@@ -9,7 +9,6 @@
 }
 
 body {
-  position: relative;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
   display: grid;
@@ -17,6 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: hsl(185, 75%, 39%);
+  overflow: hidden;
 }
 
 body::before {
@@ -27,7 +27,6 @@ body::before {
   background-image: url(./images/bg-pattern-top.svg);
   top: calc(100vh / 2 - 978px);
   left: calc(100vw / 2 - 978px);
-
   z-index: -1;
 }
 
@@ -41,7 +40,6 @@ body::after {
   left: calc(100vw / 2);
   z-index: -1;
 }
-
 .card-container {
   display: grid;
   grid-template-rows: 1fr 1fr 0.1fr 0.6fr;
