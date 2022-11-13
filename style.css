@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 18px;
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+}
+
+.card-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.1fr 0.6fr;
+  width: 350px;
+  height: 375px;
+  text-align: center;
+  align-items: center;
+  background: white;
+  border-radius: 1rem;
+}
+
+.user {
+  padding-top: 3rem;
+}
+
+.user p {
+  font-size: 14px;
+  color: hsl(227, 10%, 46%);
+  letter-spacing: 2px;
+}
+
+.age {
+  color: hsl(227, 10%, 46%);
+  font-weight: 400;
+  padding-left: 0.5rem;
+}
+
+.city {
+  padding-top: 0.6rem;
+}
+
+h3 {
+  color: hsl(229, 23%, 23%);
+}
+
+.line {
+  display: block;
+  border-top: 1px solid hsl(185, 75%, 39%);
+}
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: inherit;
+  padding-inline: 2rem;
+}
+
+.stats p {
+  font-size: 11px;
+  font-weight: 400;
+  color: hsl(227, 10%, 46%);
+  padding-top: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.top-image {
+  position: relative;
+  background-image: url(./images/bg-pattern-card.svg);
+  height: 140px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.top-image::before {
+  content: "";
+  position: relative;
+  display: block;
+  height: 112px;
+  width: 112px;
+  border-radius: 50%;
+  top: calc(140px - 112px / 2);
+  left: calc(350px / 2 - 112px / 2);
+  background-color: white;
+}
+
+.top-image::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  top: calc(140px - 96px / 2);
+  left: calc(350px / 2 - 96px / 2);
+  background-image: url(./images/image-victor.jpg);
+}
